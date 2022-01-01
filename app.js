@@ -1,10 +1,14 @@
 const path = require('path');
 const express = require('express');
+const mongoose = require('mongoose');
 const dotnev = require('dotenv');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const passport = require('passport');
 const session = require('express-session');
+//const MongoStore = require('connect-mongo')(session);
+const MongoStore = require('connect-mongodb-session')(session);
+
 const connectDB = require('./config/db');
 
 // Load Config
@@ -27,11 +31,18 @@ if (process.env.NODE_ENV === 'development') {
 app.engine('.hbs', exphbs.engine({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
+const store = new MongoStore({
+    uri: process.env.MONGO_URI,
+    databaseName: 'storybooks',
+    collection: 'sessions',
+})
+
 // SESSIONS
 app.use(session({
     secret: 'milk',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store: store,
    // cookie: {secure: true}
 }));
 

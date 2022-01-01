@@ -3,10 +3,15 @@ const express = require('express');
 const dotnev = require('dotenv');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
+const passport = require('passport');
+const session = require('express-session');
 const connectDB = require('./config/db');
 
 // Load Config
 dotnev.config({ path: './config/config.env'});
+
+// PASSPORT CONFIG
+require('./config/passport')(passport)
 
 // Connect to MongoDB
 connectDB();
@@ -22,11 +27,24 @@ if (process.env.NODE_ENV === 'development') {
 app.engine('.hbs', exphbs.engine({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
+// SESSIONS
+app.use(session({
+    secret: 'milk',
+    resave: false,
+    saveUninitialized: false
+   // cookie: {secure: true}
+}));
+
+// PASSPORT MIDDLEWARE
+app.use(passport.initialize());
+app.use(passport.session());
+
 // STATIC CONTENT FOLDER
 app.use(express.static(path.join(__dirname, 'public')));
 
 // ROUTES
 app.use('/', require('./routes/index'));
+app.use('/auth', require('./routes/auth'));
 
 const PORT = process.env.PORT || 3000;
 

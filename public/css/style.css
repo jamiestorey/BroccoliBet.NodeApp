@@ -6,3 +6,12 @@ body {
     margin-top: 3.5em;
     text-align: center;
 }
+.test-yellow{
+    color: yellow;
+}
+.input-field>label {
+    color: yellow;
+}
+input[type=text]:not(.browser-default) {
+    border-bottom: 1px dashed white;
+}

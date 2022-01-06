@@ -12,7 +12,7 @@ const MongoStore = require('connect-mongodb-session')(session);
 const connectDB = require('./config/db');
 
 // Load Config
-dotnev.config({ path: './config/config.env'});
+dotnev.config({ path: './config/config.env' });
 
 // PASSPORT CONFIG
 require('./config/passport')(passport)
@@ -23,16 +23,23 @@ connectDB();
 const app = express();
 
 // BODY PARSER
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // LOGGING
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
+// HANDLEBARSHELPERS
+const { formatDate } = require('./helpers/hbs');
 
 // HANDLEBARS
-app.engine('.hbs', exphbs.engine({defaultLayout: 'main', extname: '.hbs'}));
+app.engine('.hbs', exphbs.engine({
+    helpers: {
+        formatDate,
+    },
+    defaultLayout: 'main', extname: '.hbs'
+}));
 app.set('view engine', '.hbs');
 
 const store = new MongoStore({
@@ -47,7 +54,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     store: store,
-   // cookie: {secure: true}
+    // cookie: {secure: true}
 }));
 
 // PASSPORT MIDDLEWARE

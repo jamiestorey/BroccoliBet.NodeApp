@@ -31,12 +31,20 @@ if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
 // HANDLEBARSHELPERS
-const { formatDate } = require('./helpers/hbs');
+const { formatDate,
+    stripTags,
+    truncate,
+    editIcon,
+    select, } = require('./helpers/hbs');
 
 // HANDLEBARS
 app.engine('.hbs', exphbs.engine({
     helpers: {
         formatDate,
+        stripTags,
+        truncate,
+        editIcon,
+        select,
     },
     defaultLayout: 'main', extname: '.hbs'
 }));

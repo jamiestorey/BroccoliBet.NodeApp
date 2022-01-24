@@ -22,3 +22,6 @@ input[type=text]:not(.browser-default) {
     float: left;
     margin-right: 0.5rem;
 }
+.img-small {
+    width: 11.25rem ;
+}

@@ -65,13 +65,13 @@ app.set('view engine', '.hbs');
 
 const store = new MongoStore({
     uri: process.env.MONGO_URI,
-    databaseName: 'storybooks',
+    databaseName: 'testbbet',
     collection: 'sessions',
 })
 
 // SESSIONS
 app.use(session({
-    secret: 'milk',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     store: store,

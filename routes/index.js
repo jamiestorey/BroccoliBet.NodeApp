@@ -14,9 +14,11 @@ router.get('/',ensureGuest, (req, res) => {
 
 //@desc     Dashboard
 //@route    GET /dashboard
+// !-- todo change this to bets --
 router.get('/dashboard',ensureAuth, async (req, res) => {
     
     try {
+        
         const stories = await Story.find({user: req.user.id}).lean();
         res.render('dashboard', {
             name: req.user.firstName, 

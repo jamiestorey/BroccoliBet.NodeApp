@@ -1,0 +1,22 @@
+<div class="fixture-flex-container"></div>
+<div class="fixture">
+    <div class="fixture-headings">
+      <span class="fixture-head">Game C</span>
+      <span class="fixture-date">{{fixture.fixture_date}}</span>
+      <span class="fixture-time">{{fixture.fixture_time}}</span>
+    </div>
+
+    <div class="teams teams-flex-container">
+      <div class="teams-home">{{fixture.fixture_team_home_name}}
+        <div class="scores-home">{{fixture.fixture_goals_home}}</div>
+      </div>
+      <div class="teams-away">{{fixture.fixture_team_away_name}}
+        <div class="scores-away">{{fixture.fixture_goals_away}}</div>
+      </div>
+    </div>
+    <div class="fixture-footer">
+      <span class="fixture-footer-status">Status: <span class="fixture-status">{{fixture.fixture_status}}</span></span>
+      <span class="fixture-time">Bet Result: None</span>
+      <span class="fixture-expand" onclick="expandFixture()">+</span>
+    </div>
+</div>

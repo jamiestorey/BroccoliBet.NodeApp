@@ -25,3 +25,135 @@ input[type=text]:not(.browser-default) {
 .img-small {
     width: 11.25rem ;
 }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+   h1 {
+    font-size: 1.5rem;
+  }
+  th, td {
+  
+    padding: 0.3rem;
+    outline: 1px solid darkgrey;
+  }
+  
+  table {
+    margin: 1rem;
+    text-align: center;
+  }
+  
+  .fixture-flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fff111;
+  }
+  
+  .teams-flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    background-color: lightgrey;
+  }
+  
+  .fixture {
+    border: 1px solid black;
+    color: black;
+    width: 18rem;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    background-color: lightgray;
+    display: flow;
+  }
+  .fixture-headings, .fixture-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 95%;
+  }
+  .fixture-footer-status {
+    color: black;
+  }
+  .fixture-expand {
+    color: darkcyan;
+  }
+  span.fixture-expand:hover{
+    display: block;
+    color: red;
+    font-size: large;
+    font-weight: bolder;
+    background-color: white;
+    text-shadow: -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+  }
+  .extra {
+    position: relative;
+  }
+  .fixture-status {
+    color: magenta;
+    font-weight: bold;
+    font-style: italic;
+  }
+  .fixture-head {
+    text-decoration: underline;
+    font-size: 95%;
+  }
+  
+  .fixture-date {
+    /*padding-left: 0.5em;*/
+    /*padding-right: 0.1em;*/
+    color: black;
+  }
+  
+  .fixture-time {
+    color: black;
+  }
+  
+  .teams {
+    height: 8rem;
+    color: black;
+    text-align: center;
+  }
+  
+  .teams-home {
+    padding: 0.0rem;
+    margin: 0.0rem;
+    width: 9rem;
+    /*border: 1px solid lime;*/
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .teams-away {
+    padding: 0.0rem;
+    margin: 0.0rem;
+    width: 9rem;
+    /*border: 1px solid brown;*/
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .scores-home {
+    font-size: 2rem;
+    /*border: 1px solid black;*/
+    margin-top: auto;
+  }
+  
+  .scores-away {
+    font-size: 2rem;
+    /*border: 1px solid blue;*/
+    margin-top: auto;
+  
+  }
+  
+  .scores-shadow {
+    text-shadow: -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+  }

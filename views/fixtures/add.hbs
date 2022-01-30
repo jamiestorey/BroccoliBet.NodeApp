@@ -1,0 +1,27 @@
+<h3>Add Bet</h3>
+<div class="row">
+    <form action="/bets/test" method="POST" class="col s12 test-yellow">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="fixtureID" name="fixtureID">
+                <label class="test-yellow" for="fixtureID">Fixture Id</label>
+            </div>
+        </div>
+
+
+        <div class="slidecontainer">
+            <input type="range" min="0" max="15" value="1" class="slider" id="guessHomeScore">
+            <p>Value: <span id="guessHomeScore"></span></p>
+        </div>
+
+        <div class="slidecontainer">
+            <input type="range" min="0" max="15" value="1" class="slider" id="guessAwayScore">
+            <p>Value: <span id="guessAwayScore"></span></p>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Save" class="btn">
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+    </form>
+</div>

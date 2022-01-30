@@ -4,7 +4,7 @@
 <p>Here are your bets.</p>
 
 {{!-- todo change this to bets --}}
-{{#if stories}}
+{{#if bets}}
 <table class="striped">
     <thead>
         <tr>
@@ -16,10 +16,10 @@
     </thead>
     <tbody>
         {{!-- todo change this to bets --}}
-        {{#each stories}}
+        {{#each bets}}
         <tr>
             {{!-- todo change this to bets --}}
-            <td><a href="/stories/{{_id}}">{{title}}</a></td>
+            <td><a href="/stories/{{_id}}">{{fixtureID}}</a></td>
             <td>{{formatDate createdAt 'Do MMMM YYYY, h:mm a'}}</td>
             <td><span class="dash-status">{{status}}</span></td>
             <td>

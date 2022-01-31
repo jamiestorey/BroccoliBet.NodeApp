@@ -67,7 +67,12 @@ const store = new MongoStore({
     uri: process.env.MONGO_URI,
     databaseName: 'testbbet',
     collection: 'sessions',
-})
+});
+
+// Catch errors
+store.on('error', function(error) {
+  console.log(error);
+});
 
 // SESSIONS
 app.use(session({

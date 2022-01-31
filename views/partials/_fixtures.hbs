@@ -1,0 +1,35 @@
+<div class="fixture-flex-container">
+    {{#each fixtures}}
+
+    <div class="fixture" id="{{fixture_id}}">
+        <div class="fixture-headings">
+            <span class="fixture-head">{{fixtures_round}}</span>
+            <span class="fixture-date">{{fixture_date}}</span>
+            <span class="fixture-time">{{fixture_time}}</span>
+        </div>
+
+        <div class="teams teams-flex-container">
+            <div class="teams-home"><span class="team-name">{{fixture_team_home_name}}</span>
+                <div class="scores-home">
+                    <img class="team-logo" src="https://media.api-sports.io/football/teams/{{fixture_team_home_id}}.png" alt="">
+                    {{fixture_goals_home}}
+                </div>
+            </div>
+            <div class="teams-home">{{fixture_team_away_name}}
+                <div class="scores-home">{{fixture_goals_home}}
+                    <img class="team-logo" src="https://media.api-sports.io/football/teams/{{fixture_team_away_id}}.png" alt="">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="fixture-footer">
+            <span class="fixture-footer-status">Status: <span class="fixture-status">{{fixture_status}}</span></span>
+            <span class="fixture-time">Bet Result: None</span>
+            <span class="fixture-expand" onclick="expandFixture()">+</span>
+        </div>
+    </div>
+
+    {{else}}
+    <p>No stories to display</p>
+    {{/each}}
+</div>

@@ -7,11 +7,17 @@
     </div>
 
     <div class="teams teams-flex-container">
-      <div class="teams-home">{{fixture.fixture_team_home_name}}
-        <div class="scores-home">{{fixture.fixture_goals_home}}</div>
+      <div class="teams-home"><span class="team-name">{{fixture.fixture_team_home_name}}</span>
+        <div class="scores-home">
+          <img class="team-logo"src="https://media.api-sports.io/football/teams/{{fixture.fixture_team_home_id}}.png" alt="">
+          {{fixture.fixture_goals_home}}
+        </div>
       </div>
-      <div class="teams-away">{{fixture.fixture_team_away_name}}
-        <div class="scores-away">{{fixture.fixture_goals_away}}</div>
+      <div class="teams-home"><span class="team-name">{{fixture.fixture_team_away_name}}</span>
+        <div class="scores-home">
+           {{fixture.fixture_goals_away}}
+           <img class="team-logo"src="https://media.api-sports.io/football/teams/{{fixture.fixture_team_away_id}}.png" alt="">
+        </div>
       </div>
     </div>
     <div class="fixture-footer">

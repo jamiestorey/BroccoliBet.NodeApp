@@ -7,12 +7,12 @@ const BetFixtureSchema = new mongoose.Schema({
         trim: true
     },
     guessHomeScore: {
-        type: String,
+        type: Number,
         required: true,
         // default: -2
     },
     guessAwayScore: {
-        type: String,
+        type: Number,
         required: true,
         // default: -4
     },

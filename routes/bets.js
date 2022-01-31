@@ -36,6 +36,8 @@ router.get('/add',ensureAuth, (req, res) => {
 router.post('/test',ensureAuth, async (req, res) => {
     try {
         req.body.user = req.user.id;
+        req.body.guessHomeScore = parseInt(req.body.guessHomeScore);
+        req.body.guessAwayScore = parseInt(req.body.guessAwayScore);
         await BetFixture.create(req.body);
         res.redirect('/dashboard');
     } catch (err) {

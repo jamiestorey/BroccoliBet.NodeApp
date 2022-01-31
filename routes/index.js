@@ -27,9 +27,11 @@ router.get('/dashboard',ensureAuth, async (req, res) => {
         //     stories
         // });
         const bets = await BetFixture.find({user: req.user.id}).lean();
+        const fixtures = await Fixture.find({fixture_date: "05/02/2022"}).lean();
         res.render('dashboard', {
             name: req.user.firstName, 
-            bets
+            bets,
+            fixtures
         });
     } catch (error) {
         console.error(err);

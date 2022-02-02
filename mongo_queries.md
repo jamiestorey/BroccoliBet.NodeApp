@@ -10,3 +10,13 @@
     ]
 }
 ```
+## An alternative way to search matches that haven't started that could include Match postponed
+#### Goals value of -111 means the match hasn't started yet
+```
+{
+    $or: [
+        { $and: [ { fixture_team_home_name: "Wigan" }, { fixture_goals_home : -111 } ] },
+        { $and: [ { fixture_team_away_name: "Wigan" }, { fixture_goals_away : -111} ] }
+    ]
+}
+```

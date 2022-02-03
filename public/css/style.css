@@ -50,7 +50,7 @@ input[type=text]:not(.browser-default) {
     justify-content: center;
     background-color: #fff111;
   }
-  
+   
   .teams-flex-container {
     display: flex;
     flex-direction: row;
@@ -59,7 +59,7 @@ input[type=text]:not(.browser-default) {
     background-color: lightgrey;
     align-items: center;
   }
-  
+/*   
   .fixture {
     border: 1px solid black;
     color: black;
@@ -169,7 +169,7 @@ input[type=text]:not(.browser-default) {
   .team-name {
     display: inline-flex;
     justify-content: space-evenly;
-  }
+  }  */
 
 
   /* slider */

@@ -28,21 +28,26 @@
             <span class="fixture-expand" onclick="expandFixture()">+</span>
         </div>
     </div> --}}
+    <fixture-football id="{{fixture_id}}">
+        <span slot="game-letter">{{fixtures_round}}</span>
+        <span slot="game-date">{{fixture_date}}</span>
+        <span slot="game-time">{{fixture_time}}</span>
+        <span slot="game-home-name">{{fixture_team_home_name}}</span>
+        <span slot="game-away-name">{{fixture_team_away_name}}</span>
+        <span slot="scores-home-number">{{fixture_goals_home}}
+            <img class="team-logo" src="https://media.api-sports.io/football/teams/{{fixture_team_home_id}}.png" alt="">
+        </span>
+        <span slot="scores-away-number">{{fixture_goals_away}}
+            <img class="team-logo" src="https://media.api-sports.io/football/teams/{{fixture_team_away_id}}.png" alt="">
+        </span>
+        <span slot="fixture-status">{{fixture_status}}</span>
+        <span slot="fixture-bet-result">Test Bet</span>
+    </fixture-football>
 
 
-<fixture-football id="{{fixture_id}}">
-    <span slot="game-letter"></span>
-    <span slot="game-date">{{fixture_date}}</span>
-    <span slot="game-time">{{fixture_time}}</span>
-    <span slot="game-home-team">{{fixture_team_home_name}}</span>
-    <span slot="game-away-team">{{fixture_team_away_name}}</span>
-    <span slot="scores-home-number">{{fixture_goals_home}}</span>
-    <span slot="scores-away-number">{{fixture_goals_away}}</span>
-    <span slot="fixture-status">{{fixture_status}}</span>
-    <span slot="fixture-bet-result">Test Bet</span>
-</fixture-football>
 
     {{else}}
     <p>No stories to display</p>
     {{/each}}
+</div>
 </div>

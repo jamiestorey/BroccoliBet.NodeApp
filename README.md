@@ -4,7 +4,7 @@ This is uninished betting site that I'm working on.
 It's the first web site I'm working on since taking a break from programming a few years ago.
 I'm using this project to learn web development again.
 I've been writing about my experience every day on my blog:
-https://jamiestorey.dev/development-diary/
+https://jamiestorey.dev/development-diary/start/
 
 It's not for real bets, only frinedly bets between friends.
 

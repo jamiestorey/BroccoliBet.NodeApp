@@ -20,3 +20,7 @@
     ]
 }
 ```
+## Number of rounds in a season
+'''
+db.latest__41.distinct("fixture_round").length
+'''

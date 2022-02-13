@@ -28,13 +28,18 @@ router.get('/dashboard',ensureAuth, async (req, res) => {
         // });
         const bets = await BetFixture.find({user: req.user.id}).lean();
         const fixtures = await Fixture.find({fixture_date: "25/09/2021"}).lean();
+        const rounds = await  Fixture.distinct("fixtures_round").lean();
+        console.log(rounds);
         res.render('dashboard', {
             name: req.user.firstName, 
             bets,
-            fixtures
+            fixtures,
+            rounds
         });
     } catch (error) {
-        console.error(err);
+        console.log(error);
+        console.log(rounds);
+        console.log("check index.js line 41");
         res.render('error/500');
     }
     

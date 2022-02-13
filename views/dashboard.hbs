@@ -1,6 +1,19 @@
 <h1>Dashboard View</h1>
 <p>Welcome {{name}}</p>
 <a href="/">Home</a>
+
+
+// todo style the rounds list or create a drop down or slider
+// todo create a route for each round and make the list a link to that round to display all fixtures for that round
+{{#if rounds}}
+  <div>
+      {{#each rounds}}
+        <p>{{this}}</p>
+        {{/each}}
+  </div>
+  {{else}}
+<p>no rounds?</p>
+{{/if}}
 <p>Here are your bets.</p>
 
 <fixture-football>
@@ -15,6 +28,7 @@
     <span slot="fixture-bet-result">Test3 Bet</span>
   </fixture-football>
 
+  
 {{!-- todo change this to bets --}}
 {{#if bets}}
 <table class="striped">

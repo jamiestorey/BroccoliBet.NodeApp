@@ -38,7 +38,32 @@ router.get('/:id', ensureAuth, async (req, res) => {
         });
 
     } catch (err) {
-        console.error(err);
+        console.log(err);
+        res.render('error/404');
+    }
+});
+
+// @desc    Show single fixture
+// @route   GET /fixtures/round/:id
+
+// todo render using javascript component
+router.get('/round/:fixtures_round', ensureAuth, async (req, res) => {
+    try {
+        let fixtures = await Fixture.find({fixtures_round:req.params.fixtures_round}).lean();
+        // console.log(fixtures);
+        // let fixture = await Fixture.findById(req.params.id).lean();
+
+        if (!fixtures) {
+            return res.render('error/404');
+        }
+
+
+        res.render('fixtures/index', {
+            fixtures,
+        });
+
+    } catch (err) {
+        console.log(err);
         res.render('error/404');
     }
 });

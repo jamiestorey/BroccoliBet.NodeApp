@@ -21,6 +21,11 @@
 }
 ```
 ## Number of rounds in a season
-'''
+```
 db.latest__41.distinct("fixture_round").length
-'''
+```
+### One round and one season
+```JavaScript
+let theRound = req.params.fixtures_rounds;
+let fixtures = await Fixture.find({fixture_round: theRound, fixture_league_id: 39}).lean();
+```

@@ -7,9 +7,11 @@
 // todo create a route for each round and make the list a link to that round to display all fixtures for that round
 {{#if rounds}}
   <div>
+      <ul>
       {{#each rounds}}
-        <p>{{this}}</p>
+       <li><a href="/fixtures/round/{{this}}">{{this}}</a></li>
         {{/each}}
+        </ul>
   </div>
   {{else}}
 <p>no rounds?</p>

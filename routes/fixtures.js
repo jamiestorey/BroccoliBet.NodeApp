@@ -46,10 +46,14 @@ router.get('/:id', ensureAuth, async (req, res) => {
 // @desc    Show single fixture
 // @route   GET /fixtures/round/:id
 
-// todo render using javascript component
-router.get('/round/:fixtures_round', ensureAuth, async (req, res) => {
+// TODO: render using javascript component
+// TODO: add routes with league_id parameter
+router.get('/round/:fixtures_rounds', ensureAuth, async (req, res) => {
     try {
-        let fixtures = await Fixture.find({fixtures_round:req.params.fixtures_round}).lean();
+        // let fixtures = await Fixture.find({fixtures_round:req.params.fixtures_round},{fixture_id: 39}).lean();
+        console.log(req.params.fixtures_rounds);
+        let theRound = req.params.fixtures_rounds;
+        let fixtures = await Fixture.find({fixture_round: theRound, fixture_league_id: 39}).lean();
         // console.log(fixtures);
         // let fixture = await Fixture.findById(req.params.id).lean();
 

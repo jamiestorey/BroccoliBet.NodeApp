@@ -16,9 +16,9 @@ const FixtureSchema = new mongoose.Schema({
         type: String
     },
     "fixture_league_id": {
-        type: String
+        type: Number
     },
-    "fixtures_round": {
+    "fixture_round": {
         type: String
     },
     "fixture_team_home_id": {

@@ -16,7 +16,7 @@ router.get('/',ensureGuest, (req, res) => {
 
 //@desc     Dashboard
 //@route    GET /dashboard
-// !-- todo change this to bets --
+// !-- TODO: change this to bets --
 router.get('/dashboard',ensureAuth, async (req, res) => {
     
     try {
@@ -27,8 +27,14 @@ router.get('/dashboard',ensureAuth, async (req, res) => {
         //     stories
         // });
         const bets = await BetFixture.find({user: req.user.id}).lean();
-        const fixtures = await Fixture.find({fixture_date: "25/09/2021"}).lean();
-        const rounds = await  Fixture.distinct("fixtures_round").lean();
+        const fixtures = await Fixture.find({
+            $or: [
+                { $and: [ { fixture_team_home_name: "Sunderland" }, { fixture_status : "Not Started" } ] },
+                { $and: [ { fixture_team_away_name: "Sunderland" }, { fixture_status : "Not Started" } ] }
+            ]
+        }).lean();
+        const rounds = await  Fixture.distinct("fixture_round").lean();
+        rounds.sort();
         console.log(rounds);
         res.render('dashboard', {
             name: req.user.firstName, 

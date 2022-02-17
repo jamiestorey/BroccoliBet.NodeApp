@@ -8,7 +8,7 @@ https://jamiestorey.dev/development-diary/start/
 
 It's not for real bets, only frinedly bets between friends.
 
-The bets are for every football game in the Premier Leauge and Leauge One
+The bets are for every football game in the English Leagues(Premier Leauge and Leauge One)
 
 There are already deidcated apps available but they either don't allow betting on League One Games
 or limit the number of games you can bet on in each round.

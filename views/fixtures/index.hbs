@@ -1,8 +1,8 @@
 <h1>Fixtures</h1>
 <div class="fixture-flex-container">
-    {{#each fixtures}}
-
-    <div class="fixture" id="{{fixture_id}}">
+    {{!-- {{#each fixtures}} --}}
+    {{!-- <<<---NORMAL HTML - NO COMPONENTS --}}
+    {{!-- <div class="fixture" id="{{fixture_id}}">
         <div class="fixture-headings">
             <span class="fixture-head">{{fixture_round}}</span>
             <span class="fixture-date">{{fixture_date}}</span>
@@ -28,9 +28,12 @@
             <span class="fixture-time">Bet Result: None</span>
             <span class="fixture-expand" onclick="expandFixture()">+</span>
         </div>
-    </div>
+    </div> --}}
 
+
+    {{> _fixtures}}
+{{!-- 
     {{else}}
     <p>No fixtures to display</p>
-    {{/each}}
+    {{/each}} --}}
 </div>

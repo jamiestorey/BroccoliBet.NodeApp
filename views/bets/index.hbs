@@ -1,4 +1,5 @@
 <h1>Bets</h1>
+{{!-- TODO: Render the bets in a table or something pretty --}}
 <div class="row">
     {{#each bets}}
     <div class="col s12 m4">
@@ -7,17 +8,22 @@
                 {{{editIcon user ../user _id}}}
             </div>
             <div class="card-content center-align">
-                <h5>{{fixtureID}}</h5>
+                <p>{{fixtureID}} - Home Score Guess: <span>{{guessHomeScore}}</span>
+                - Away Score Guess: <span>{{guessAwayScore}}
+                    - Date: <span>{{formatDate createdAt 'Do MMMM YYYY, h:mm a'}}</span>
+                </span>
+                - Status: <span>{{status}}</span>
+                - Points Earned: <span>{{pointsEarned}}</span></p>
                 {{!-- <p>{{stripTags (truncate body 150)}}</p> --}}
                 <br>
-                <div class="chip">
+                {{!-- <div class="chip">
                     <img src="{{user.image}}" alt="">
                     <a href="/bets/user/{{user._id}}">{{user.displayName}}   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                </div>
+                </div> --}}
             </div>
-            <div class="card-action center-align">
+            {{!-- <div class="card-action center-align">
                 <a href="/bets/{{_id}}" class="btn grey">Read More</a>
-            </div>
+            </div> --}}
         </div>
     </div>
     {{else}}

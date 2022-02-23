@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+// TODO: Consider changing status to betStatus?
 
 const BetFixtureSchema = new mongoose.Schema({
     fixtureID: {

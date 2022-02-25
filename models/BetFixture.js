@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 
 const BetFixtureSchema = new mongoose.Schema({
     fixtureID: {
-        type: String,
+        type: Number,
         required: true,
-        trim: true
+        
     },
     guessHomeScore: {
         type: Number,
@@ -34,6 +34,10 @@ const BetFixtureSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    example: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Fixture'
     }
 });
 

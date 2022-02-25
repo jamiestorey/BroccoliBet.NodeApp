@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const FixtureSchema = new mongoose.Schema({
     fixture_id: {
-        type: String,
+        type: Number,
         required: true
     },
     fixture_date: {

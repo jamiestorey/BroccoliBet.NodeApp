@@ -9,40 +9,40 @@ const FixtureSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    "fixture_time": {
+    fixture_time: {
         type: String
     },
-    "fixture_status": {
+    fixture_status: {
         type: String
     },
-    "fixture_league_id": {
+    fixture_league_id: {
         type: Number
     },
-    "fixture_round": {
+    fixture_round: {
         type: String
     },
-    "fixture_team_home_id": {
+    fixture_team_home_id: {
         type: String
     },
-    "fixture_team_away_id": {
+    fixture_team_away_id: {
         type: String
     },
-    "fixture_team_home_name": {
+    fixture_team_home_name: {
         type: String
     },
-    "fixture_team_away_name": {
+    fixture_team_away_name: {
         type: String
     },
-    "fixture_team_home_is_winner": {
+    fixture_team_home_is_winner: {
         type: String
     },
-    "fixture_team_away_is_winner": {
+    fixture_team_away_is_winner: {
         type: String
     },
-    "fixture_goals_home": {
+    fixture_goals_home: {
         type: String
     },
-    "fixture_goals_away": {
+    fixture_goals_away: {
         type: String
     },
 });

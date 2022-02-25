@@ -10,7 +10,7 @@ const BetFixture = require('../models/BetFixture');
 //@route    GET /bets/
 router.get('/',ensureAuth, async (req, res) => {
     try {
-        const bets = await BetFixture.find({ status: 'pending' })
+        const bets = await BetFixture.find({user: req.user.id, status: 'pending' })
       .populate('user')
       .sort({ createdAt: 'desc' })
       .lean();

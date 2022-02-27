@@ -1,6 +1,6 @@
 # BroccoliBet.NodeApp
 
-This is uninished betting site that I'm working on.
+This is an uninished betting site that I'm working on.
 It's the first web site I'm working on since taking a break from programming a few years ago.
 I'm using this project to learn web development again.
 I've been writing about my experience every day on my blog:

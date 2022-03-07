@@ -13,7 +13,10 @@ router.get('/',ensureAuth, async (req, res) => {
         const bets = await BetFixture.find({user: req.user.id, status: 'pending' })
       .populate('user')
       .sort({ createdAt: 'desc' })
+      .populate('fixture')
       .lean();
+
+      console.log({bets})
 
     res.render('bets/index', {
       bets,
@@ -36,8 +39,11 @@ router.get('/add',ensureAuth, (req, res) => {
 router.post('/test',ensureAuth, async (req, res) => {
     try {
         req.body.user = req.user.id;
+        req.body.fixture = req.body.fixtureID;
+        // req.body.example = req.body.example;
         req.body.guessHomeScore = parseInt(req.body.guessHomeScore);
         req.body.guessAwayScore = parseInt(req.body.guessAwayScore);
+        console.log(req.body);
         await BetFixture.create(req.body);
         res.redirect('/dashboard');
     } catch (err) {

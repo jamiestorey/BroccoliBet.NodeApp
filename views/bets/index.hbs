@@ -2,14 +2,16 @@
 {{!-- TODO: Render the bets in a table or something pretty --}}
 <div class="row">
     {{#each bets}}
+    <div style="border: 2px solid black;">Football Fixture from Betfixture:{{fixture._id}}</div>
+    <div style="border: 2px dashed white;">BetFixture ID:{{_id}}</div>
     <div class="col s12 m4">
         <div class="card">
             <div class="card-image">
-                {{{editIcon user ../user _id}}}
+                {{!-- {{{editIcon user ../user _id}}} --}}
             </div>
             <div class="card-content center-align">
-                <p>{{fixtureID}} - Home Score Guess: <span>{{guessHomeScore}}</span>
-                - Away Score Guess: <span>{{guessAwayScore}}
+                <p>{{fixture.fixture_id}} - Home {{fixture.fixture_team_home_name}} Guess: <span>{{guessHomeScore}}</span>
+                - Away {{fixture.fixture_team_away_name}} Guess: <span>{{guessAwayScore}}
                     - Date: <span>{{formatDate createdAt 'Do MMMM YYYY, h:mm a'}}</span>
                 </span>
                 - Status: <span>{{status}}</span>

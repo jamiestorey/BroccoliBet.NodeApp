@@ -2,10 +2,9 @@ const mongoose = require('mongoose');
 // TODO: Consider changing status to betStatus?
 
 const BetFixtureSchema = new mongoose.Schema({
-    fixtureID: {
-        type: Number,
-        required: true,
-        
+    fixture: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Fixture'
     },
     guessHomeScore: {
         type: Number,
@@ -35,10 +34,7 @@ const BetFixtureSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    example: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Fixture'
-    }
+   
 });
 
 module.exports = mongoose.model('BetFixture', BetFixtureSchema);

@@ -19,128 +19,135 @@ template.innerHTML = `
     /*display: flex;*/
     /*}*/
 
-  .fixture-flex-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #fff111;
-}
+//   .fixture-flex-container {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   background-color: #fff111;
+// }
 
-.teams-flex-container {
-  display: flex;
-  flex-direction: row;
-  /*flex-wrap: nowrap;*/
-  justify-content: normal;
-  background-color: lightgrey;
-}
+// .teams-flex-container {
+//   display: flex;
+//   flex-direction: row;
+//   /*flex-wrap: nowrap;*/
+//   justify-content: normal;
+//   background-color: lightgrey;
+// }
 
-.fixture {
-  border: 1px solid black;
-  color: black;
-  width: 16rem;
-  margin: 0.2rem;
-  padding: 0.2rem;
-  background-color: lightgray;
-  display: flow;
-}
-.fixture-headings, .fixture-footer{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  font-size: 95%;
-}
-.fixture-footer-status {
-  color: black;
-}
-.fixture-expand {
-  color: darkcyan;
-}
-span.fixture-expand:hover{
-  display: block;
-  color: red;
-  font-size: large;
-  font-weight: bolder;
-  background-color: white;
-  text-shadow: -1px 1px 0 #000,
-  1px 1px 0 #000,
-  1px -1px 0 #000,
-  -1px -1px 0 #000;
-}
-.extra {
-  position: relative;
-}
-.fixture-status {
-  color: magenta;
-  font-weight: bold;
-  font-style: italic;
-}
-.fixture-head {
-  text-decoration: underline;
-  font-size: 95%;
-}
+// .fixture {
+//   border: 1px solid black;
+//   color: black;
+//   width: 16rem;
+//   margin: 0.2rem;
+//   padding: 0.2rem;
+//   background-color: lightgray;
+//   display: flow;
+// }
+// .fixture-headings, .fixture-footer{
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-evenly;
+//   font-size: 95%;
+// }
+// .fixture-footer-status {
+//   color: black;
+// }
+// .fixture-expand {
+//   color: darkcyan;
+// }
+// span.fixture-expand:hover{
+//   display: block;
+//   color: red;
+//   font-size: large;
+//   font-weight: bolder;
+//   background-color: white;
+//   text-shadow: -1px 1px 0 #000,
+//   1px 1px 0 #000,
+//   1px -1px 0 #000,
+//   -1px -1px 0 #000;
+// }
+// .extra {
+//   position: relative;
+// }
+// .fixture-status {
+//   color: magenta;
+//   font-weight: bold;
+//   font-style: italic;
+// }
+// .fixture-head {
+//   text-decoration: underline;
+//   font-size: 95%;
+// }
 
-.fixture-date {
-  /*padding-left: 0.5em;*/
-  /*padding-right: 0.1em;*/
-  color: black;
-}
+// .fixture-date {
+//   /*padding-left: 0.5em;*/
+//   /*padding-right: 0.1em;*/
+//   color: black;
+// }
 
-.fixture-time {
-  color: black;
-}
+// .fixture-time {
+//   color: black;
+// }
 
-.teams {
-  height: 6rem;
-  color: black;
-  text-align: center;
-}
+// .teams {
+//   height: 6rem;
+//   color: black;
+//   text-align: center;
+// }
+// .team-logo {
+//   height: 50px;
+//   width: 50px;
+// }
+// .team-name {
+//   display: inline-flex;
+//   justify-content: space-evenly;
+// }   
+// .teams-home {
+//   /*padding: 0.0rem;*/
+//   /*margin: 0.0rem;*/
+//   width: 8rem;
+//   border: 1px solid lime;
+//   display: flex;
+//   flex-direction: column;
+// }
 
-.teams-home {
-  /*padding: 0.0rem;*/
-  /*margin: 0.0rem;*/
-  width: 8rem;
-  border: 1px solid lime;
-  display: flex;
-  flex-direction: column;
-}
+// .teams-away {
+//   /*padding: 0.0rem;*/
+//   /*margin: 0.0rem;*/
+//   width: 8rem;
+//   border: 1px solid brown;
+//   display: flex;
+//   flex-direction: column;
+// }
 
-.teams-away {
-  /*padding: 0.0rem;*/
-  /*margin: 0.0rem;*/
-  width: 8rem;
-  border: 1px solid brown;
-  display: flex;
-  flex-direction: column;
-}
+// .scores-home {
+//   font-size: 2rem;
+//   border: 2px dashed black;
+//   margin-top: auto;
+//   color: pink;
+// }
 
-.scores-home {
-  font-size: 2rem;
-  border: 2px dashed black;
-  margin-top: auto;
-  color: pink;
-}
+// .scores-away {
+//   font-size: 2rem;
+//   border: 2px dashed cyan;
+//   margin-top: auto;
+//   color: yellow;
 
-.scores-away {
-  font-size: 2rem;
-  border: 2px dashed cyan;
-  margin-top: auto;
-  color: yellow;
+// }
 
-}
+// .scores-shadow {
+//   text-shadow: -1px 1px 0 #000,
+//   1px 1px 0 #000,
+//   1px -1px 0 #000,
+//   -1px -1px 0 #000;
+// }
 
-.scores-shadow {
-  text-shadow: -1px 1px 0 #000,
-  1px 1px 0 #000,
-  1px -1px 0 #000,
-  -1px -1px 0 #000;
-}
-
-.hidden,
-[hidden] {
-  display: none !important;
-}
-  </style>
+// .hidden,
+// [hidden] {
+//   display: none !important;
+// }
+//   </style>
 <!--  <div class="fixture">-->
 <!--  <div class="fixture-container">-->
 <!--  <span>Span 1</span>-->
@@ -207,7 +214,7 @@ span.fixture-expand:hover{
       <span class="fixture-time">Bet Result: <span><slot name="fixture-bet-result" /></span></span>
       <span class="fixture-expand">-</span>
     </div>
-    <div id="extra-4" class="extra">hi
+    <div id="extra-4" class="extra">
       <span class="one">One</span><br>
       <span class="two">Two</span><br>
       <span class="three">Three</span>

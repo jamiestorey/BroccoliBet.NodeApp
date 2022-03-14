@@ -38,18 +38,18 @@
         </ul>
         <tr>
             {{!-- todo change this to bets --}}
-            <td><a href="/stories/{{_id}}">{{fixtureID}}</a></td>
+            <td><a href="/bets/{{_id}}">{{fixtureID}}</a></td>
             <td>{{formatDate createdAt 'Do MMMM YYYY, h:mm a'}}</td>
             <td><span class="dash-status">{{status}}</span></td>
             <td>
-                <a href="/stories/edit/{{_id}}" class="btn-float">
-                    <i class="fas fa-edit"></i>
+                <a href="/bets/edit/{{_id}}" class="todo">
+                    <i class="todo">todo add emoji or edit icon</i>
                 </a>
                 {{!-- todo change this to bets --}}
-                <form action="/stories/{{_id}}" method="POST" id="delete-form">
+                <form action="/bets/{{_id}}" method="POST" id="delete-form">
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn red">
-                        <i class="fas fa-trash"></i>
+                    <button type="submit" class="todo">
+                        <i class="todo">❌</i>
                     </button>
             </td>
             </form>

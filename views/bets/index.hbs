@@ -4,28 +4,17 @@
     {{#each bets}}
     <div style="border: 2px solid black;">Football Fixture from Betfixture:{{fixture._id}}</div>
     <div style="border: 2px dashed white;">BetFixture ID:{{_id}}</div>
-    <div class="col s12 m4">
-        <div class="card">
-            <div class="card-image">
-                {{!-- {{{editIcon user ../user _id}}} --}}
-            </div>
-            <div class="card-content center-align">
+    <div class="todo">
+        <div class="todo">
+            <div class="todo">
                 <p>{{fixture.fixture_id}} - Home {{fixture.fixture_team_home_name}} Guess: <span>{{guessHomeScore}}</span>
                 - Away {{fixture.fixture_team_away_name}} Guess: <span>{{guessAwayScore}}
                     - Date: <span>{{formatDate createdAt 'Do MMMM YYYY, h:mm a'}}</span>
                 </span>
                 - Status: <span>{{status}}</span>
                 - Points Earned: <span>{{pointsEarned}}</span></p>
-                {{!-- <p>{{stripTags (truncate body 150)}}</p> --}}
-                <br>
-                {{!-- <div class="chip">
-                    <img src="{{user.image}}" alt="">
-                    <a href="/bets/user/{{user._id}}">{{user.displayName}}   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                </div> --}}
+                {
             </div>
-            {{!-- <div class="card-action center-align">
-                <a href="/bets/{{_id}}" class="btn grey">Read More</a>
-            </div> --}}
         </div>
     </div>
     {{else}}

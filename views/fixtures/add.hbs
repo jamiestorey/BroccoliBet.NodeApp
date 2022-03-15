@@ -28,3 +28,22 @@
         </div>
     </form>
 </div>
+{{!-- Sliders --}}
+    {{!-- TODO: make oop --}}
+    <script>
+        var sliderHome = document.getElementById("guessHomeScore");
+        var outputHome = document.getElementById("guessHomeScore1");
+        outputHome.innerHTML = sliderHome.value;
+
+        sliderHome.oninput = function () {
+            outputHome.innerHTML = this.value;
+        }
+
+        var sliderAway = document.getElementById("guessAwayScore");
+        var outputAway = document.getElementById("guessAwayScore1");
+        outputAway.innerHTML = sliderAway.value;
+
+        sliderAway.oninput = function () {
+            outputAway.innerHTML = this.value;
+        }
+    </script>

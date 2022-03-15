@@ -17,29 +17,6 @@
         {{{body}}}
     </div>
 
-
-
-
-    {{!-- Sliders --}}
-    {{!-- TODO: make oop --}}
-    <script>
-        var sliderHome = document.getElementById("guessHomeScore");
-        var outputHome = document.getElementById("guessHomeScore1");
-        outputHome.innerHTML = sliderHome.value;
-
-        sliderHome.oninput = function () {
-            outputHome.innerHTML = this.value;
-        }
-
-        var sliderAway = document.getElementById("guessAwayScore");
-        var outputAway = document.getElementById("guessAwayScore1");
-        outputAway.innerHTML = sliderAway.value;
-
-        sliderAway.oninput = function () {
-            outputAway.innerHTML = this.value;
-        }
-    </script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.17.1/ckeditor.js"
         integrity="sha512-VXEKi5eNc7ECuyIueuledlqeUWiJ7hcxBe9fnsCiVzeZ0XwJxAPemnq01/LBIBnp3i0szhvKNd9Us7fqNPsRmQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

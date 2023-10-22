@@ -12,11 +12,19 @@ router.get('/google/callback', passport.authenticate('google', {failureRedirect:
     res.redirect('/dashboard');
 } );
 
-//@desc     Logout User
-//@route    GET /auth/logout
-router.get('/logout', (req, res) => {
-    req.logOut();
-    res.redirect('/');
-});
+// //@desc     Logout User
+// //@route    GET /auth/logout
+// router.get('/logout', (req, res) => {
+//     req.logOut();
+//     res.redirect('/');
+// });
+
+// TODO: Use post instead of get as suggested from "https://www.passportjs.org/concepts/authentication/logout/"
+router.get('/logout', function(req, res, next){
+    req.logout(function(err) {
+      if (err) { return next(err); }
+      res.redirect('/');
+    });
+  });
 
 module.exports = router
